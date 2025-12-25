@@ -9,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= htmlspecialchars($title ?? 'QueueNow') ?></title>
 
-    <link rel="stylesheet" href="<?= htmlspecialchars(config('app.base_url')) ?>/public/assets/css/app.css">
+    <link rel="stylesheet" href="/public/assets/css/app.css">
+    <script src="/public/assets/js/app.js"></script>
+
 </head>
 
 <body>
