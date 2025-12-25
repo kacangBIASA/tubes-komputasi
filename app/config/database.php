@@ -1,15 +1,14 @@
 <?php
 // app/config/database.php
-// PDO MySQL (Azure MySQL / MySQL biasa) - ambil dari .env
 
 return [
-    'driver'  => Env::get('DB_DRIVER', 'mysql'),
-    'host'    => Env::get('DB_HOST', '127.0.0.1'),
-    'port'    => (int) Env::get('DB_PORT', '3306'),
-    'name'    => Env::get('DB_DATABASE', 'queuenow'),
-    'user'    => Env::get('DB_USERNAME', 'root'),
-    'pass'    => Env::get('DB_PASSWORD', ''),
-    'charset' => Env::get('DB_CHARSET', 'utf8mb4'),
+    'driver'  => getenv('DB_DRIVER') ?: 'mysql',
+    'host'    => getenv('DB_HOST') ?: '127.0.0.1',
+    'port'    => (int)(getenv('DB_PORT') ?: 3306),
+    'name'    => getenv('DB_DATABASE') ?: 'queuenow',
+    'user'    => getenv('DB_USERNAME') ?: 'root',
+    'pass'    => getenv('DB_PASSWORD') ?: '',
+    'charset' => getenv('DB_CHARSET') ?: 'utf8mb4',
 
     'options' => [
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
