@@ -11,7 +11,7 @@ class DB
 
         $cfg = config('database');
 
-        // Tambahkan sslmode=required untuk Azure MySQL (require_secure_transport=ON)
+        // Azure MySQL: require_secure_transport=ON => wajib TLS
         $dsn = sprintf(
             '%s:host=%s;port=%s;dbname=%s;charset=%s;sslmode=required',
             $cfg['driver'],
