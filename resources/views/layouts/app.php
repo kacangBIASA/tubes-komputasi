@@ -23,12 +23,14 @@ $owner = $owner ?? Auth::user();
           <span class="brand-text">QueueNow</span>
         </a>
 
+        
         <div class="nav-actions">
           <div class="theme-toggle" role="group" aria-label="Theme toggle">
             <button type="button" class="theme-btn" data-set-theme="dark" title="Tema Gelap">🌙</button>
             <button type="button" class="theme-btn" data-set-theme="light" title="Tema Terang">☀️</button>
           </div>
 
+          <a class="btn btn-ghost" href="<?= htmlspecialchars(base_url('/dashboard')) ?>">Dashboard</a>
           <a class="btn btn-ghost" href="<?= htmlspecialchars(base_url('/logout')) ?>">Logout</a>
         </div>
       </div>
