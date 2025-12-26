@@ -5,17 +5,21 @@ class CSRF
 {
     public static function token(): string
     {
-        $t = Session::get('_csrf');
-        if (!$t) {
-            $t = bin2hex(random_bytes(16));
-            Session::set('_csrf', $t);
+        if (empty($_SESSION['_csrf'])) {
+            $_SESSION['_csrf'] = bin2hex(random_bytes(16));
         }
-        return $t;
+        return (string) $_SESSION['_csrf'];
     }
 
     public static function verify(?string $token): bool
     {
-        $saved = Session::get('_csrf');
-        return is_string($saved) && is_string($token) && hash_equals($saved, $token);
+        $saved = $_SESSION['_csrf'] ?? null;
+        return is_string($saved) && is_string($token) && $token !== '' && hash_equals($saved, $token);
+    }
+
+    // helper untuk ambil token dari request POST
+    public static function requestToken(): ?string
+    {
+        return $_POST['_csrf'] ?? $_POST['_token'] ?? null;
     }
 }
