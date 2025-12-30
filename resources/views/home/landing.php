@@ -19,7 +19,7 @@
             <div class="hero-cta">
                 <a class="btn btn-primary btn-lg" href="<?= htmlspecialchars(config('app.base_url')) ?>/register">Mulai Gratis</a>
                 <a class="btn btn-secondary btn-lg" href="<?= htmlspecialchars(config('app.base_url')) ?>/login">Login Owner</a>
-                <a class="btn btn-ghost btn-lg" href="#pricing">Lihat Pricing</a>
+                <a class="btn btn-ghost btn-lg" href="<?= htmlspecialchars(config('app.base_url')) ?>/subscription/pricing">Lihat Pricing</a>
             </div>
 
             <div class="feature-mini-grid">
@@ -70,7 +70,7 @@
                         <li>Export PDF/Excel</li>
                         <li>Grafik harian/bulanan</li>
                     </ul>
-                    <a class="link" href="#pricing">Upgrade Pro →</a>
+                    <a class="link" href="<?= htmlspecialchars(config('app.base_url')) ?>/subscription/pricing">Upgrade Pro →</a>
                 </div>
             </div>
         </div>
@@ -89,42 +89,6 @@
             <div class="card card-soft">
                 <div class="step-title">3) Kelola Antrean</div>
                 <div class="card-text">Panggil, skip, selesai, reset harian, dan lihat riwayat.</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="pricing" class="pricing">
-    <div class="container">
-        <div class="pricing-title">Pricing</div>
-        <div class="pricing-subtitle">Free untuk mulai, Pro untuk grafik & laporan.</div>
-
-        <div class="pricing-grid">
-            <div class="card card-soft">
-                <div class="price-head">
-                    <div class="price-name">Free</div>
-                    <div class="price-tag">Rp0</div>
-                </div>
-                <ul class="list">
-                    <li>Maks 1 cabang</li>
-                    <li>Riwayat 1 bulan</li>
-                    <li>Tanpa export</li>
-                </ul>
-                <a class="btn btn-secondary w-full" href="<?= htmlspecialchars(config('app.base_url')) ?>/register">Mulai Gratis</a>
-            </div>
-
-            <div class="card card-glow">
-                <div class="price-head">
-                    <div class="price-name">Pro</div>
-                    <div class="price-tag">RpXX.XXX/bln</div>
-                </div>
-                <ul class="list">
-                    <li>Cabang unlimited</li>
-                    <li>Riwayat tanpa batas</li>
-                    <li>Grafik harian/bulanan</li>
-                    <li>Export PDF/Excel</li>
-                </ul>
-                <a class="btn btn-primary w-full" href="#pricing">Upgrade Pro</a>
             </div>
         </div>
     </div>
